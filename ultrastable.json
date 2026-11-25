@@ -1,0 +1,24 @@
+{
+ "identity": {
+  "name": "Base Rates",
+  "slug": "base-rates",
+  "summary": "Before you decide, see what usually happens: graded base rates for life, work and policy choices, and your own forecasting record.",
+  "repo": "ultrastable/base-rates",
+  "public_url": null,
+  "planned_url": "https://base-rates.ultrastable.org",
+  "license": "LicenseRef-Ultrastable-USL-1.0",
+  "topics": [
+   "autonomous-system",
+   "cloudflare-workers",
+   "ultrastable"
+  ],
+  "layer": "tenant",
+  "runs_as": {
+   "platform": "cloudflare-workers",
+   "worker": "ultrastable-base-rates",
+   "deployed": false,
+   "deployed_from": "main",
+   "deployed_by": "ultrastable/ultrastable deploy-ultrastable"
+  }
+ }
+}
