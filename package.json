@@ -1,0 +1,9 @@
+{
+  "name": "base-rates",
+  "private": true,
+  "type": "module",
+  "description": "Before you decide, see what usually happens: graded base rates for life, work and policy choices, and your own forecasting record.",
+  "scripts": {
+    "test": "node --test --no-warnings worker/*.test.mjs"
+  }
+}
