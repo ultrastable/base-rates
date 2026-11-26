@@ -12,5 +12,19 @@
    }
   ],
   "grade": "quoted from the source abstract; study design not yet graded"
+ },
+ {
+  "id": "medication-adherence-chronic-disease",
+  "title": "Medication adherence chronic disease",
+  "rate": "50%",
+  "summary": "Almost 50% of them do not take their medications as prescribed",
+  "sources": [
+   {
+    "title": "A Medication Template for Patients with Chronic Medical Conditions to Promote Medication Adherence",
+    "year": 2020,
+    "doi": "10.14293/s2199-1006.1.sor-.ppbjzih.v1"
+   }
+  ],
+  "grade": "quoted from the source abstract; study design not yet graded"
  }
 ]
