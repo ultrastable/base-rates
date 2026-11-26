@@ -35,10 +35,11 @@ async function chat(prompt) {
   for (const r0 of routes) {
     if (!r0.key) { say("route", r0.name, "skipped: no token"); continue; }
     const r = await fetch(r0.url, { method: "POST", headers: { authorization: "Bearer " + r0.key, "content-type": "application/json", "user-agent": UA },
-      body: JSON.stringify({ model: r0.model, temperature: 0, response_format: { type: "json_object" }, messages: [{ role: "user", content: prompt }] }) });
+      body: JSON.stringify({ model: r0.model, temperature: 0, max_tokens: 400, messages: [{ role: "system", content: "You extract facts from study abstracts. Reply with one JSON object and nothing else." }, { role: "user", content: prompt }] }) });
     say("route", r0.name, r.status, ["x-ratelimit-remaining-requests", "x-ratelimit-remaining-tokens"].map(h => h + "=" + r.headers.get(h)).join(" "));
     if (!r.ok) { last = r0.name + " " + r.status + ": " + (await r.text()).slice(0, 160); continue; }
     const j = await r.json(), txt = j.choices[0].message.content || "{}";
+    say("reply", JSON.stringify(txt.slice(0, 200)));
     return { answer: JSON.parse(txt.slice(txt.indexOf("{"), txt.lastIndexOf("}") + 1) || "{}"), route: r0.name, usage: j.usage };
   }
   throw new Error("no model route answered: " + last);
