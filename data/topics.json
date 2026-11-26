@@ -1,0 +1,25 @@
+{
+ "_doc": "Reference classes the loop looks for, one a run, oldest attempt first. Only names live here: every figure on the site comes from a source abstract and is checked against it in code (github/verify.mjs).",
+ "topics": [
+  "new small business survival five years",
+  "restaurant failure rate first years",
+  "megaproject cost overrun",
+  "IT project cost overrun",
+  "weight loss maintenance after one year",
+  "smoking cessation quit attempt success",
+  "new year resolution kept",
+  "startup venture capital failure rate",
+  "mergers and acquisitions fail to create value",
+  "clinical trial phase transition success probability",
+  "replication rate psychology studies",
+  "drug addiction relapse after treatment",
+  "marriage divorce rate first marriage",
+  "lottery winners bankruptcy",
+  "rail project ridership forecast overestimate",
+  "software project late delivery",
+  "medication adherence chronic disease",
+  "gym membership usage attendance",
+  "student dropout first year university",
+  "public policy pilot scaled up effect shrinks"
+ ]
+}
