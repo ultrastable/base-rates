@@ -1,1 +1,16 @@
-[]
+[
+ {
+  "id": "drug-addiction-relapse-after-treatment",
+  "title": "Drug addiction relapse after treatment",
+  "rate": "60%",
+  "summary": "Many clients (60%) used heroin after treatment, with the first occasion of heroin use usually occurring very soon after leaving treatment: 40% remained abstinent from heroin.",
+  "sources": [
+   {
+    "title": "Factors associated with abstinence, lapse or relapse to heroin use after residential treatment: protective effect of coping responses",
+    "year": 2002,
+    "doi": "10.1046/j.1360-0443.2002.00227.x"
+   }
+  ],
+  "grade": "quoted from the source abstract; study design not yet graded"
+ }
+]
