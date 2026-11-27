@@ -26,5 +26,19 @@
    }
   ],
   "grade": "quoted from the source abstract; study design not yet graded"
+ },
+ {
+  "id": "megaproject-cost-overrun",
+  "title": "Megaproject cost overrun",
+  "rate": "47% of Games have cost overruns above 100%.",
+  "summary": "47 percent of Games have cost overruns above 100 percent.",
+  "sources": [
+   {
+    "title": "The Oxford Olympics Study 2016: Cost and Cost Overrun at the Games",
+    "year": 2016,
+    "doi": "10.2139/ssrn.2804554"
+   }
+  ],
+  "grade": "quoted from the source abstract; study design not yet graded"
  }
 ]
