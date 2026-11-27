@@ -1,0 +1,12 @@
+{
+ "ok": true,
+ "system": "Base Rates",
+ "stage": "publishing",
+ "blocks_next": null,
+ "entries": 6,
+ "halted": false,
+ "clock": "ticking",
+ "every_hours": 1,
+ "last_beat": "2026-11-27T21:40:54.875Z",
+ "last_error": null
+}

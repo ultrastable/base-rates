@@ -1,0 +1,20 @@
+{
+ "ultrastable": 1,
+ "contract": 1,
+ "name": "Base Rates",
+ "summary": "Before you decide, see what usually happens: graded base rates for life, work and policy choices, and your own forecasting record.",
+ "url": "https://base-rates.ultrastable.org",
+ "repo": "https://github.com/ultrastable/base-rates",
+ "license": "LicenseRef-Ultrastable-USL-1.0",
+ "discoverable": true,
+ "platform": "https://ultrastable.io",
+ "directory": "https://ultrastable.io/directory",
+ "surfaces": {
+  "home": "/",
+  "manifest": "/.well-known/ultrastable.json",
+  "claims": "/claims.json",
+  "health": "/health",
+  "social": "/social-queue.json",
+  "graph": "/api/graph"
+ }
+}

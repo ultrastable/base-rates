@@ -1,0 +1,89 @@
+{
+ "count": 6,
+ "entries": [
+  {
+   "id": "drug-addiction-relapse-after-treatment",
+   "title": "Drug addiction relapse after treatment",
+   "rate": "60%",
+   "summary": "Many clients (60%) used heroin after treatment, with the first occasion of heroin use usually occurring very soon after leaving treatment: 40% remained abstinent from heroin.",
+   "sources": [
+    {
+     "title": "Factors associated with abstinence, lapse or relapse to heroin use after residential treatment: protective effect of coping responses",
+     "year": 2002,
+     "doi": "10.1046/j.1360-0443.2002.00227.x"
+    }
+   ],
+   "grade": "quoted from the source abstract; study design not yet graded"
+  },
+  {
+   "id": "medication-adherence-chronic-disease",
+   "title": "Medication adherence chronic disease",
+   "rate": "50%",
+   "summary": "Almost 50% of them do not take their medications as prescribed",
+   "sources": [
+    {
+     "title": "A Medication Template for Patients with Chronic Medical Conditions to Promote Medication Adherence",
+     "year": 2020,
+     "doi": "10.14293/s2199-1006.1.sor-.ppbjzih.v1"
+    }
+   ],
+   "grade": "quoted from the source abstract; study design not yet graded"
+  },
+  {
+   "id": "megaproject-cost-overrun",
+   "title": "Megaproject cost overrun",
+   "rate": "47% of Games have cost overruns above 100%.",
+   "summary": "47 percent of Games have cost overruns above 100 percent.",
+   "sources": [
+    {
+     "title": "The Oxford Olympics Study 2016: Cost and Cost Overrun at the Games",
+     "year": 2016,
+     "doi": "10.2139/ssrn.2804554"
+    }
+   ],
+   "grade": "quoted from the source abstract; study design not yet graded"
+  },
+  {
+   "id": "weight-loss-maintenance-after-one-year",
+   "title": "Weight loss maintenance after one year",
+   "rate": "At week 121, 33% and 34%.",
+   "summary": "At week 69, 52% of the patients with and 44% of those without maintenance program had lost weight ≥ 5%, P = 0.40 , and, at week 121, 33% and 34%, P = 0.77 , respectively.",
+   "sources": [
+    {
+     "title": "Long-Term Weight Maintenance after a 17-Week Weight Loss Intervention with or without a One-Year Maintenance Program: A Randomized Controlled Trial",
+     "year": 2015,
+     "doi": "10.1155/2015/651460"
+    }
+   ],
+   "grade": "quoted from the source abstract; study design not yet graded"
+  },
+  {
+   "id": "smoking-cessation-quit-attempt-success",
+   "title": "Smoking cessation quit attempt success rate",
+   "rate": "0.040% per 1% increase",
+   "summary": "The success rate of quit attempts increased by 0.040% (95%CI 0.019; 0.062) for every 1% increase in the prevalence of e-cigarette use during a quit attempt.",
+   "sources": [
+    {
+     "title": "Associations of prevalence of e-cigarette use with quit attempts, quit success, use of smoking cessation medication, and the overall quit rate in England: a time-series analysis of population trends 2007-2022",
+     "year": 2023,
+     "doi": "10.31219/osf.io/3mzbu"
+    }
+   ],
+   "grade": "quoted from the source abstract; study design not yet graded"
+  },
+  {
+   "id": "startup-venture-capital-failure-rate",
+   "title": "Startup Venture Capital Failure Rate",
+   "rate": "200 U.S.–based VCFs over a 12–year period.",
+   "summary": "We tested our hypotheses on longitudinal data of the realized strategies of 200 U.S.–based VCFs over a 12–year period.",
+   "sources": [
+    {
+     "title": "Venture Capital Investment Strategy and Portfolio Failure Rate: A Longitudinal Study",
+     "year": 2006,
+     "doi": "10.1111/j.1540-6520.2006.00118.x"
+    }
+   ],
+   "grade": "quoted from the source abstract; study design not yet graded"
+  }
+ ]
+}

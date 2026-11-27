@@ -1,0 +1,102 @@
+{
+ "system": "Base Rates",
+ "built_from": "/api/entries.json",
+ "counts": {
+  "nodes": 12,
+  "edges": 6
+ },
+ "nodes": [
+  {
+   "id": "entry:drug-addiction-relapse-after-treatment",
+   "kind": "entry",
+   "label": "Drug addiction relapse after treatment"
+  },
+  {
+   "id": "source:10.1046/j.1360-0443.2002.00227.x",
+   "kind": "source",
+   "label": "Factors associated with abstinence, lapse or relapse to heroin use after residential treatment: protective effect of coping responses"
+  },
+  {
+   "id": "entry:medication-adherence-chronic-disease",
+   "kind": "entry",
+   "label": "Medication adherence chronic disease"
+  },
+  {
+   "id": "source:10.14293/s2199-1006.1.sor-.ppbjzih.v1",
+   "kind": "source",
+   "label": "A Medication Template for Patients with Chronic Medical Conditions to Promote Medication Adherence"
+  },
+  {
+   "id": "entry:megaproject-cost-overrun",
+   "kind": "entry",
+   "label": "Megaproject cost overrun"
+  },
+  {
+   "id": "source:10.2139/ssrn.2804554",
+   "kind": "source",
+   "label": "The Oxford Olympics Study 2016: Cost and Cost Overrun at the Games"
+  },
+  {
+   "id": "entry:weight-loss-maintenance-after-one-year",
+   "kind": "entry",
+   "label": "Weight loss maintenance after one year"
+  },
+  {
+   "id": "source:10.1155/2015/651460",
+   "kind": "source",
+   "label": "Long-Term Weight Maintenance after a 17-Week Weight Loss Intervention with or without a One-Year Maintenance Program: A Randomized Controlled Trial"
+  },
+  {
+   "id": "entry:smoking-cessation-quit-attempt-success",
+   "kind": "entry",
+   "label": "Smoking cessation quit attempt success rate"
+  },
+  {
+   "id": "source:10.31219/osf.io/3mzbu",
+   "kind": "source",
+   "label": "Associations of prevalence of e-cigarette use with quit attempts, quit success, use of smoking cessation medication, and the overall quit rate in England: a time-series analysis of population trends 2007-2022"
+  },
+  {
+   "id": "entry:startup-venture-capital-failure-rate",
+   "kind": "entry",
+   "label": "Startup Venture Capital Failure Rate"
+  },
+  {
+   "id": "source:10.1111/j.1540-6520.2006.00118.x",
+   "kind": "source",
+   "label": "Venture Capital Investment Strategy and Portfolio Failure Rate: A Longitudinal Study"
+  }
+ ],
+ "edges": [
+  {
+   "from": "entry:drug-addiction-relapse-after-treatment",
+   "to": "source:10.1046/j.1360-0443.2002.00227.x",
+   "kind": "cites"
+  },
+  {
+   "from": "entry:medication-adherence-chronic-disease",
+   "to": "source:10.14293/s2199-1006.1.sor-.ppbjzih.v1",
+   "kind": "cites"
+  },
+  {
+   "from": "entry:megaproject-cost-overrun",
+   "to": "source:10.2139/ssrn.2804554",
+   "kind": "cites"
+  },
+  {
+   "from": "entry:weight-loss-maintenance-after-one-year",
+   "to": "source:10.1155/2015/651460",
+   "kind": "cites"
+  },
+  {
+   "from": "entry:smoking-cessation-quit-attempt-success",
+   "to": "source:10.31219/osf.io/3mzbu",
+   "kind": "cites"
+  },
+  {
+   "from": "entry:startup-venture-capital-failure-rate",
+   "to": "source:10.1111/j.1540-6520.2006.00118.x",
+   "kind": "cites"
+  }
+ ]
+}
