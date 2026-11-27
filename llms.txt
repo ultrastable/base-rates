@@ -1,0 +1,28 @@
+# Base Rates
+
+> Before you decide, see what usually happens: graded base rates for life, work and policy choices, and your own forecasting record.
+
+An hourly beat re-reads each entry's source series for new releases and surfaces newer studies; readers' guesses before the reveal measure which base rates surprise most and order the site.
+
+## Live
+
+- [Base Rates](https://base-rates.ultrastable.org/): the running system
+- [Health report](https://base-rates.ultrastable.org/health): the result of its last tick
+- [Statements](https://base-rates.ultrastable.org/claims.json): what it states, and the endpoint behind each statement
+- [llms.txt](https://base-rates.ultrastable.org/llms.txt): the index the running system serves, with every route it answers
+
+## Start here
+
+- [README.md](README.md): what it is, where it runs and how it runs
+- [AGENTS.md](AGENTS.md): instructions for any coding agent
+- [IDEA.md](IDEA.md): the one file a person writes
+- [ultrastable.json](ultrastable.json): the manifest this file, the README blocks, CITATION.cff, publiccode.yml and codemeta.json are rendered from
+- [codemeta.json](codemeta.json): software metadata (CodeMeta 3.0)
+
+## Optional
+
+- [Source](https://github.com/ultrastable/base-rates): the repository
+- [LICENSE](LICENSE): the licence, LicenseRef-Ultrastable-USL-1.0
+- [CONTRIBUTING.md](CONTRIBUTING.md): how work is contributed
+- [SECURITY.md](SECURITY.md): how to report a vulnerability
+- [CHANGELOG.md](CHANGELOG.md): what changed, release by release

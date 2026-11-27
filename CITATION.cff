@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+authors:
+  - name: "Rowan Brad Quni-Gudzinas"
+title: "Base Rates"
+abstract: "Before you decide, see what usually happens: graded base rates for life, work and policy choices, and your own forecasting record."
+repository-code: "https://github.com/ultrastable/base-rates"
+license-url: "https://github.com/ultrastable/base-rates/blob/main/LICENSE"
+url: "https://base-rates.ultrastable.org"
