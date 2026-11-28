@@ -17,11 +17,14 @@ const gh = async (path, init = {}) => {
 const log = [];
 const say = (...a) => { const l = a.join(" "); log.push(l); console.log(l); };
 
-// ROOT-CAUSE-1: the query used to be the same top 6 results on every try, so a miss repeated forever. `attempt` pages through Crossref
-// (6 abstracts per page) so each retry reads different sources, and the word "rate" no longer biases the search toward base rates.
+// ROOT-CAUSE FIX: a retry used to fetch the same six top hits and ask a temperature-0 model, so a topic that failed once failed forever.
+// Each attempt now searches a different window (offset) and phrasing, so the loop sees new abstracts every time it tries again.
 const PAGE = 6, MAX_ATTEMPTS = Number(process.env.MAX_ATTEMPTS || 6);
+const PHRASES = [" rate", " proportion of cases percent", " prevalence percentage", " incidence systematic review", " probability meta-analysis"];
+export const plan = attempt => ({ rows: 10, offset: attempt * 10, phrase: PHRASES[attempt % PHRASES.length] });
 async function sources(topic, attempt = 0) {
-  const u = `https://api.crossref.org/works?rows=${PAGE}&offset=${attempt * PAGE}&filter=has-abstract:true&select=DOI,title,abstract,issued&query=` + encodeURIComponent(topic + " review");
+  const p = plan(attempt);
+  const u = `https://api.crossref.org/works?rows=${p.rows}&offset=${p.offset}&filter=has-abstract:true&select=DOI,title,abstract,issued&query=` + encodeURIComponent(topic + p.phrase);
   const r = await fetch(u, { headers: { "user-agent": UA } });
   if (!r.ok) throw new Error("Crossref " + r.status);
   return ((await r.json()).message.items || []).map(i => ({ doi: i.DOI, title: clean((i.title || [])[0]), year: i.issued?.["date-parts"]?.[0]?.[0] || null, abstract: clean(i.abstract) })).filter(s => s.year && s.abstract.length > 80);
@@ -61,7 +64,7 @@ async function chat(prompt) {
 
 async function draft(topic, srcs) {
   const prompt = `Reference class: "${topic}". Below are study abstracts. If one abstract states a base rate for this reference class (a share, percentage or ratio of cases with the outcome), answer with JSON only: {"doi": the DOI, "quote": one sentence copied EXACTLY from that abstract that states the figure, "rate": a short plain statement of the base rate using only numbers in that sentence, "title": a plain title for the reference class}. If none states one, answer {"doi": null}.\n\n` +
-    srcs.map(s => `DOI: ${s.doi}\nTitle: ${s.title}\nAbstract: ${s.abstract.slice(0, 1800)}`).join("\n\n");
+    srcs.map(s => `DOI: ${s.doi}\nTitle: ${s.title}\nAbstract: ${s.abstract.slice(0, 900)}`).join("\n\n");
   return chat(prompt);
 }
 
