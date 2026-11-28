@@ -1,0 +1,32 @@
+{
+ "contract": 1,
+ "system": "Base Rates",
+ "rule": "Every statement names the page that shows it and the endpoint that backs it. The platform fetches both.",
+ "statements": [
+  {
+   "id": "clock",
+   "text": "A beat runs on a clock and records itself; the latest beats are listed as data.",
+   "page": "/",
+   "api": "/api/beats"
+  },
+  {
+   "id": "reread",
+   "text": "Each published entry's source is re-read on the clock, and the share re-read within seven days is served as data with the result for every entry.",
+   "page": "/",
+   "api": "/api/rereads"
+  },
+  {
+   "id": "entries",
+   "text": "Nothing is published here without a cited, graded source; the published list is served as data and says why when it is empty.",
+   "page": "/",
+   "api": "/api/entries.json"
+  },
+  {
+   "id": "graph",
+   "text": "Every published entry and each of its sources is a node in one graph, built from the same list.",
+   "page": "/",
+   "api": "/api/graph"
+  }
+ ],
+ "internal": []
+}

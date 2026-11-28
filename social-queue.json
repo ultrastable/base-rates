@@ -1,0 +1,168 @@
+{
+ "tenant": "base-rates",
+ "posts": [
+  {
+   "id": "base-rates:drug-addiction-relapse-after-treatment",
+   "date": "2026-11-23",
+   "text": "Drug addiction relapse after treatment\nhttps://base-rates.ultrastable.org/#drug-addiction-relapse-after-treatment\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#drug-addiction-relapse-after-treatment",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:medication-adherence-chronic-disease",
+   "date": "2026-11-25",
+   "text": "Medication adherence chronic disease\nhttps://base-rates.ultrastable.org/#medication-adherence-chronic-disease\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#medication-adherence-chronic-disease",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:megaproject-cost-overrun",
+   "date": "2026-11-27",
+   "text": "Megaproject cost overrun\nhttps://base-rates.ultrastable.org/#megaproject-cost-overrun\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#megaproject-cost-overrun",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:weight-loss-maintenance-after-one-year",
+   "date": "2026-11-29",
+   "text": "Weight loss maintenance after one year\nhttps://base-rates.ultrastable.org/#weight-loss-maintenance-after-one-year\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#weight-loss-maintenance-after-one-year",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:smoking-cessation-quit-attempt-success",
+   "date": "2026-12-01",
+   "text": "Smoking cessation quit attempt success rate\nhttps://base-rates.ultrastable.org/#smoking-cessation-quit-attempt-success\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#smoking-cessation-quit-attempt-success",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:startup-venture-capital-failure-rate",
+   "date": "2026-12-03",
+   "text": "Startup Venture Capital Failure Rate\nhttps://base-rates.ultrastable.org/#startup-venture-capital-failure-rate\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#startup-venture-capital-failure-rate",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:marriage-divorce-rate-first-marriage",
+   "date": "2026-12-05",
+   "text": "Divorce rate among first marriages\nhttps://base-rates.ultrastable.org/#marriage-divorce-rate-first-marriage\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#marriage-divorce-rate-first-marriage",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:gym-membership-usage-attendance",
+   "date": "2026-12-07",
+   "text": "Gym Membership Usage Attendance\nhttps://base-rates.ultrastable.org/#gym-membership-usage-attendance\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#gym-membership-usage-attendance",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:drug-addiction-relapse-after-treatment:c1",
+   "date": "2026-12-09",
+   "text": "Drug addiction relapse after treatment\nhttps://base-rates.ultrastable.org/#drug-addiction-relapse-after-treatment\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#drug-addiction-relapse-after-treatment",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:medication-adherence-chronic-disease:c1",
+   "date": "2026-12-11",
+   "text": "Medication adherence chronic disease\nhttps://base-rates.ultrastable.org/#medication-adherence-chronic-disease\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#medication-adherence-chronic-disease",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:megaproject-cost-overrun:c1",
+   "date": "2026-12-13",
+   "text": "Megaproject cost overrun\nhttps://base-rates.ultrastable.org/#megaproject-cost-overrun\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#megaproject-cost-overrun",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:weight-loss-maintenance-after-one-year:c1",
+   "date": "2026-12-15",
+   "text": "Weight loss maintenance after one year\nhttps://base-rates.ultrastable.org/#weight-loss-maintenance-after-one-year\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#weight-loss-maintenance-after-one-year",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:smoking-cessation-quit-attempt-success:c1",
+   "date": "2026-12-17",
+   "text": "Smoking cessation quit attempt success rate\nhttps://base-rates.ultrastable.org/#smoking-cessation-quit-attempt-success\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#smoking-cessation-quit-attempt-success",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:startup-venture-capital-failure-rate:c1",
+   "date": "2026-12-19",
+   "text": "Startup Venture Capital Failure Rate\nhttps://base-rates.ultrastable.org/#startup-venture-capital-failure-rate\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#startup-venture-capital-failure-rate",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:marriage-divorce-rate-first-marriage:c1",
+   "date": "2026-12-21",
+   "text": "Divorce rate among first marriages\nhttps://base-rates.ultrastable.org/#marriage-divorce-rate-first-marriage\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#marriage-divorce-rate-first-marriage",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:gym-membership-usage-attendance:c1",
+   "date": "2026-12-23",
+   "text": "Gym Membership Usage Attendance\nhttps://base-rates.ultrastable.org/#gym-membership-usage-attendance\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#gym-membership-usage-attendance",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:drug-addiction-relapse-after-treatment:c2",
+   "date": "2026-12-25",
+   "text": "Drug addiction relapse after treatment\nhttps://base-rates.ultrastable.org/#drug-addiction-relapse-after-treatment\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#drug-addiction-relapse-after-treatment",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  },
+  {
+   "id": "base-rates:medication-adherence-chronic-disease:c2",
+   "date": "2026-12-27",
+   "text": "Medication adherence chronic disease\nhttps://base-rates.ultrastable.org/#medication-adherence-chronic-disease\nBase Rates runs on Ultrastable.",
+   "url": "https://base-rates.ultrastable.org/#medication-adherence-chronic-disease",
+   "kind": "tenant",
+   "arm": "base-rates-item",
+   "tenant": "base-rates"
+  }
+ ],
+ "refused": []
+}
