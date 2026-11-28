@@ -16,7 +16,7 @@ const src = readFileSync(new URL("./index.js", import.meta.url), "utf8");
 
 test("every surface answers and every statement is backed, both ways", async () => {
   const apis = routesIn(src);
-  for (const need of ["/api/beats", "/api/entries.json", "/api/graph"]) assert.ok(apis.includes(need), need + " read from the router");
+  for (const need of ["/api/beats", "/api/rereads", "/api/entries.json", "/api/graph"]) assert.ok(apis.includes(need), need + " read from the router");
   const r = await verify(site(), SPEC, { apis });
   assert.deepEqual(r.failures, []);
   assert.ok(r.checks > 12);

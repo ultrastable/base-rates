@@ -2,14 +2,15 @@
 // Copyright (c) Ultrastable
 // Base Rates: one Worker, back end and public front end (FULLSTACK-1). Ultrastable is the foundation for any autonomous system.
 // It serves the fleet contract (/, /.well-known/ultrastable.json, /claims.json, /health, /social-queue.json, /api/graph), the published list and
-// its own clock. The beat is the loop's first step: it records that it ran and how many base rates it saw, and removes old beats. What the loop
-// does to each entry (re-reading its sources) is added with the first entry, as a step of the same beat.
+// its own clock. The beat records that it ran and how many base rates it saw, removes old beats, and re-reads the sources of the entries
+// longest unchecked (worker/reread.js); the share re-read within 7 days is the system's own measure and is served at /health and /api/rereads.
 // Two routes for the clock: the cron, and a read of /health when the last beat is older than two intervals (runway risk cron-silent).
 import { contractRoute } from "../vendor/ultrastable/contract.js";
 import { promoQueue } from "../vendor/ultrastable/promoqueue.js";
 import { SPEC, SITE, ID, BEAT_HOURS } from "./contract.js";
 import { ENTRIES, EMPTY_WHY } from "./entries.js";
 import { home, notFound } from "./site.js";
+import { readEntry, due, measure } from "./reread.js";
 
 const HOUR = 3600000, KEEP_DAYS = 90;
 export const HOOK = SPEC.name + " runs on Ultrastable.";
@@ -19,6 +20,12 @@ const halted = env => String(env.HALT || "") === "1";
 
 async function ready(env) {
   await env.DB.prepare("CREATE TABLE IF NOT EXISTS beats (at INTEGER PRIMARY KEY, entries INTEGER NOT NULL, note TEXT NOT NULL)").run();
+  await env.DB.prepare("CREATE TABLE IF NOT EXISTS rereads (id TEXT PRIMARY KEY, at INTEGER NOT NULL, status TEXT NOT NULL, detail TEXT NOT NULL)").run();
+}
+async function rereads(env) {
+  if (!env.DB) return [];
+  await ready(env);
+  return (await env.DB.prepare("SELECT id, at, status, detail FROM rereads").all()).results || [];
 }
 async function beats(env, limit = 24) {
   if (!env.DB) return [];
@@ -31,7 +38,13 @@ export async function beat(env, now = Date.now()) {
   if (halted(env)) return { ran: false, why: "halted" };
   if (!env.DB) return { ran: false, why: "no database bound" };
   await ready(env);
-  const note = ENTRIES.length ? "entries seen; the source re-read step is not built yet" : "no entries yet";
+  const done = [];
+  for (const e of due(ENTRIES, await rereads(env))) {
+    const r = await readEntry(e, env.FETCH || fetch);
+    await env.DB.prepare("INSERT OR REPLACE INTO rereads (id, at, status, detail) VALUES (?1, ?2, ?3, ?4)").bind(e.id, now, r.status, r.detail).run();
+    done.push(e.id + ": " + r.status);
+  }
+  const note = ENTRIES.length ? "re-read " + (done.join("; ") || "nothing due") : "no entries yet";
   await env.DB.prepare("INSERT OR REPLACE INTO beats (at, entries, note) VALUES (?1, ?2, ?3)").bind(now, ENTRIES.length, note).run();
   const gone = await env.DB.prepare("DELETE FROM beats WHERE at < ?1").bind(now - KEEP_DAYS * 24 * HOUR).run();
   return { ran: true, at: now, entries: ENTRIES.length, removed: Number(gone?.meta?.changes || 0) };
@@ -44,7 +57,7 @@ async function health(env, now) {
     let last = (await beats(env, 1))[0] || null;
     if (!halted(env) && (!last || now - last.at > 2 * BEAT_HOURS * HOUR)) { await beat(env, now); last = (await beats(env, 1))[0] || null; }
     const fresh = !!last && now - last.at <= 2 * BEAT_HOURS * HOUR;
-    return json({ ok: fresh, ...base, clock: fresh ? "ticking" : "stopped", every_hours: BEAT_HOURS, last_beat: last ? new Date(last.at).toISOString() : null, last_error: null }, fresh ? 200 : 503, "no-store");
+    return json({ ok: fresh, ...base, clock: fresh ? "ticking" : "stopped", every_hours: BEAT_HOURS, reread: measure(ENTRIES, await rereads(env), now), last_beat: last ? new Date(last.at).toISOString() : null, last_error: null }, fresh ? 200 : 503, "no-store");
   } catch (e) {
     return json({ ok: false, ...base, clock: "stopped", last_error: String(e && e.message || e).slice(0, 200) }, 503, "no-store");
   }
@@ -79,6 +92,10 @@ export async function handle(request, env = {}, now = Date.now()) {
   if (p === "/api/beats") {
     try { const rows = await beats(env); return json({ every_hours: BEAT_HOURS, count: rows.length, beats: rows.map(b => ({ at: new Date(b.at).toISOString(), entries: b.entries, note: b.note })), ...(env.DB ? {} : { why: "no database bound" }) }); }
     catch (e) { return json({ every_hours: BEAT_HOURS, count: 0, beats: [], why: "the beat ledger could not be read" }); }
+  }
+  if (p === "/api/rereads") {
+    try { const rows = await rereads(env); const m = measure(ENTRIES, rows, now); return json({ ...m, entries: ENTRIES.map(e => { const r = rows.find(x => x.id === e.id); return r ? { id: e.id, status: r.status, at: new Date(r.at).toISOString(), detail: r.detail } : { id: e.id, status: "not yet re-read" }; }), ...(env.DB ? {} : { why: "no database bound" }) }); }
+    catch (e) { return json({ fresh: 0, of: ENTRIES.length, share: null, entries: [], why: "the re-read ledger could not be read" }); }
   }
   if (p === "/api/entries.json") return json({ count: ENTRIES.length, entries: ENTRIES, ...(ENTRIES.length ? {} : { why: EMPTY_WHY }) });
   if (p === "/api/graph") return json(graph());
