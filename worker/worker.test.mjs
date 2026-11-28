@@ -8,6 +8,9 @@ import { DatabaseSync } from "node:sqlite";
 import { handle, beat, graph } from "./index.js";
 import { ENTRIES, EMPTY_WHY, validate } from "./entries.js";
 
+// No test reaches the network: a beat re-reads sources, so the global fetch answers 503 (an outage) unless a test passes its own env.FETCH.
+globalThis.fetch = async () => new Response("{}", { status: 503 });
+
 // an in-memory SQLite with D1's prepare/bind/all/first/run surface
 export function d1() {
   const raw = new DatabaseSync(":memory:");
