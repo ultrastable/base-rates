@@ -96,5 +96,19 @@
    }
   ],
   "grade": "quoted from the source abstract; study design not yet graded"
+ },
+ {
+  "id": "gym-membership-usage-attendance",
+  "title": "Gym Membership Usage Attendance",
+  "rate": "21/61 (34.4%) were female.",
+  "summary": "The complete-case sample comprised 61 new gym members (mean age 29.05, SD 8.06 years; 21/61, 34.4% female)",
+  "sources": [
+   {
+    "title": "Digital Nudges Among New Gym Members: Controlled Formative Evaluation of Gym Attendance, Exercise Self-Efficacy, Habit Strength, and Exercise Adherence",
+    "year": 2026,
+    "doi": "10.2196/93800"
+   }
+  ],
+  "grade": "quoted from the source abstract; study design not yet graded"
  }
 ]
