@@ -82,5 +82,19 @@
    }
   ],
   "grade": "quoted from the source abstract; study design not yet graded"
+ },
+ {
+  "id": "marriage-divorce-rate-first-marriage",
+  "title": "Divorce rate among first marriages",
+  "rate": "21.14%",
+  "summary": "The prevalence of divorce was 21.14% [95% CI (19.01–23.27%)].",
+  "sources": [
+   {
+    "title": "Predictors of divorce and duration of marriage among first marriage women in Dejne administrative town",
+    "year": 2024,
+    "doi": "10.1038/s41598-024-59360-5"
+   }
+  ],
+  "grade": "quoted from the source abstract; study design not yet graded"
  }
 ]
